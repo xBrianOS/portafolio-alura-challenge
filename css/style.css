@@ -82,9 +82,13 @@ body {
   font-weight: 700;
 }
 
+/* container */
+
 .wrapper {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* hero */
@@ -146,4 +150,33 @@ body {
   object-fit: cover;
 }
 
-/* sobre mi section */
+/* sobre-mi section */
+
+.sobre-mi {
+  width: 100%;
+  margin: 64px 0;
+  background-color: var(--bg-secondary-color);
+}
+
+.sobre-mi__text {
+  width: 80%;
+  margin: auto;
+  padding: 64px 0;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--text-primary-color);
+}
+
+.sobre-mi__title {
+  /* margin-top: 64px; */
+  margin-bottom: 16px;
+}
+
+.sobre-mi__paragraph {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
