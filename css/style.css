@@ -1,9 +1,10 @@
 /* colors */
 
 :root {
-  --bg-primary-color: ##ededed;
+  --bg-primary-color: #ededed;
   --bg-secondary-color: #eaf2fd;
-  --text-default-color: #fff;
+  --text-default-color: #000000;
+  --text-secundary-color: #fff;
   --text-primary-color: #464646;
   --text-secondary-color: #2a7ae4;
 }
@@ -20,8 +21,8 @@ li {
 
 /* body */
 body {
-  background-color: var(--bg-color);
-  font-family: 'Raleway', serif;
+  background-color: var(--bg-primary-color);
+  font-family: 'Raleway', sans-serif;
 }
 
 /* navegation bar */
@@ -50,9 +51,11 @@ body {
   text-shadow: 0px 4px 5px rgba(70, 70, 70, 0.2);
 }
 
-.navbar__list {
-  display: flex;
+.navbar__list, .navbar {
+  display: flex; 
+  padding: 0;
 }
+
 
 .links {
   margin: 0 16px;
@@ -63,7 +66,7 @@ body {
 
 .links::after {
   content: '';
-  background-color: var(--text-secondary-color);
+  background-color: var(--text-default-color);
   height: 3px;
   width: 0;
   position: absolute;
@@ -156,6 +159,7 @@ body {
   width: 100%;
   margin: 64px 0;
   background-color: var(--bg-secondary-color);
+  box-shadow: 0px 2px 8px 0px rgba(70, 70, 70, 0.3);
 }
 
 .sobre-mi__text {
@@ -171,7 +175,6 @@ body {
 }
 
 .sobre-mi__title {
-  /* margin-top: 64px; */
   margin-bottom: 16px;
 }
 
@@ -179,4 +182,65 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 12px 0;
+}
+
+.skills, .hobbies {
+  width: 80%;
+  margin: auto;
+  background-color: var(--bg-primary-color);
+}
+
+.skills__tilte, .hobbies__title{
+  text-align: center;
+}
+
+.skill-container, .hobbie-container{
+  margin: 80px 0;
+  display: flex;
+  justify-content: space-around;
+} 
+
+.hobbie, .skill{
+  width: 160px;
+  height: 160px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex -end;
+  background-color: var(--text-secundary-color);
+  transition: ease-in .4s;
+}
+
+.hobbie:hover, .skill:hover{
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.skill-container svg, .hobbie-container svg{
+  width: 62px;
+}
+
+/* Media query */
+
+@media screen and (max-width: 767px) {
+  /* navbar */
+  .navbar__list:first-child{
+    display: none;
+  }
+
+  .links{
+    margin: 0;
+  }
+
+  .email{
+    font-size: 14px;
+  }
+
+  .wrapper{
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  /* hero */
+
+  
 }
