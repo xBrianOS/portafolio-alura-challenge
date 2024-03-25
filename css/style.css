@@ -86,7 +86,7 @@ body {
   font-family: 'ralewaybold';
 }
 
-/* container */
+/* main */
 
 .wrapper {
   width: 100vw;
@@ -172,7 +172,7 @@ body {
   box-shadow: 0px 2px 8px 0px rgba(70, 70, 70, 0.3);
 }
 
-.sobre-mi__text, .formation__wrapper {
+.sobre-mi__text, .formation__wrapper, .contacts-wrapper {
   width: 85%;
   margin: auto;
   padding: 64px 0;
@@ -194,6 +194,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 12px 0;
+  width: 750px;
 }
 
 .formation__wrapper{
@@ -360,6 +361,25 @@ transition: ease-in .4s;
   transition: ease-in-out .6s;
 }
 
-.conctacts{
+.contacts{
   background-color: var(--bg-secondary-color);
+}
+
+.contacts-wrapper{
+  display: flex;
+  gap: 16px;
+  width: 85%;
+}
+
+.contacts__paragraph{
+  font-family: "ralewayregular";
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.form > input {
+  margin-top: 40px;
+  height: 56px;
+  width: 80%;
+  border: none;
 }
